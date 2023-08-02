@@ -7,6 +7,7 @@ import {HomeComponent} from './home/home.component';
 import {ProfileComponent} from './profile/profile.component';
 import {ContactDetailComponent} from "./contact-detail/contact-detail.component";
 import {ContactCreateComponent} from "./contact-create/contact-create.component";
+import {BracketsComponent} from "./brackets/brackets.component";
 
 const routes: Routes = [
   {path: 'home', redirectTo: 'home'},
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'contato/:id', component: ContactDetailComponent},
   {path: 'create', component: ContactCreateComponent},
+  {path: 'brackets', component: BracketsComponent},
 
 ];
 

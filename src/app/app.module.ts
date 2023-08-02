@@ -13,7 +13,8 @@ import {ContactDetailComponent} from './contact-detail/contact-detail.component'
 import {TokenInterceptor} from "./services/interceptors/token.interceptor";
 import {ContactCreateComponent} from './contact-create/contact-create.component';
 import {NgxMaskDirective, NgxMaskPipe, provideEnvironmentNgxMask} from "ngx-mask";
-import {IConfig} from 'ngx-mask'
+import {IConfig} from 'ngx-mask';
+import { BracketsComponent } from './brackets/brackets.component'
 
 const maskConfig: Partial<IConfig> = {
     validation: false,
@@ -28,6 +29,7 @@ const maskConfig: Partial<IConfig> = {
         ProfileComponent,
         ContactDetailComponent,
         ContactCreateComponent,
+        BracketsComponent,
 
     ],
     imports: [

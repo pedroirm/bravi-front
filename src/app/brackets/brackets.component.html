@@ -1,0 +1,15 @@
+<div>
+
+</div>
+<div>
+    <div class="form-group">
+        <h3>Check Sequência</h3>
+<!--        <label for="brackets" class="form-label">Brackets</label>-->
+        <input name="brackets" class="form-control" [(ngModel)]="input" placeholder="Insira a sequência">
+        <button (click)="check()">Checar</button>
+        <p *ngIf="result !== null">
+            A sequência é <strong>{{ result ? 'válida' : 'invalida' }}</strong>.
+        </p>
+    </div>
+</div>
+
