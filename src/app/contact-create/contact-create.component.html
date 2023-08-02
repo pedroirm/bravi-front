@@ -1,0 +1,25 @@
+<h2>Adicionar Contato</h2>
+
+<div>
+  <form name="form"
+        (ngSubmit)="f.form.valid && onSubmit()"
+        #f="ngForm">
+    <div class="mb-3">
+      <label for="contact-name" class="form-label">Nome</label>
+      <input name="name" type="text" class="form-control" id="contact-name" placeholder="Insira o nome"
+             [(ngModel)]="form.name">
+    </div>
+    <div class="mb-3">
+      <label for="contact-email" class="form-label">Email</label>
+      <input name="email" class="form-control" id="contact-email" placeholder="Insira o Email" [(ngModel)]="form.email">
+    </div>
+    <div class="mb-3">
+      <label for="contact-phone" class="form-label">Telefone</label>
+      <input name="phone" class="form-control" id="contact-phone" placeholder="Insira o Telefone"
+             [(ngModel)]="form.phone" mask="(00) 00000-0000">
+    </div>
+    <button type="submit" class="btn btn-primary">Adicionar</button>
+  </form>
+</div>
+<!--  <button type="button" (click)="goBack()">go back</button>-->
+

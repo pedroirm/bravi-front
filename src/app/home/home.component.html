@@ -1,0 +1,50 @@
+<div class="d-flex justify-content-between align-items-center">
+    <h1>Lista de contatos</h1>
+
+    <a routerLink="create" class="btn btn-primary">
+        Adicionar
+    </a>
+</div>
+
+<div *ngIf="contacts && !isLoading">
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Email</th>
+            <th scope="col">Telefone</th>
+            <th scope="col">Whatsapp</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Deletar</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let contact of contacts">
+            <th scope="row">{{contact.id}}</th>
+            <td>{{contact.name}}</td>
+            <td>{{contact.email}}</td>
+            <td>{{contact.phone | mask: '(00) 00000-0000'}}</td>
+            <td>
+                <a class="btn btn-success" (click)="whastapp(contact.phone)">WhatsApp</a>
+            </td>
+            <td>
+                <a class="btn btn-secondary" routerLink="/contato/{{contact.id}}">
+                    Editar
+                </a>
+            </td>
+            <td>
+                <a class="btn btn-danger" (click)="delete(contact.id)">Excluir</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div *ngIf="isLoading">
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden"></span>
+        </div>
+    </div>
+</div>
